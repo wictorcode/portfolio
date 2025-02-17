@@ -29,11 +29,12 @@ body {
     aspect-ratio: 4/3;
     padding: 1rem;
     background-color: var(--wii-bg-white);
-    background-image: url("./background_texture_white.png");
+    background-image: url("./images/background_texture_white.png");
     background-repeat: repeat;
 }
 
 .wii-app-thumbnail {
+    position: relative;
     margin: 10px;    
     width: 255px;
     height: 128px;
@@ -43,19 +44,44 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("./background_texture_transparent.png");
+    background-image: url("./images/background_texture_transparent.png");
     background-repeat: repeat;
     background-size: 10%;
     background-position: 100%;
+    overflow: hidden;
 }
 
 .wii-app-thumbnail:hover {
-    outline: 4px solid var(--wii-outline-blue);
+    outline: 5px solid var(--wii-outline-blue);
 }
 
 .wii-app-thumbnail-wiiText {
+    position: absolute;
     font-size: 5rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgba(0, 0, 0, 0.063);
     user-select: none;
+    z-index: 0;
+}
+
+.wii-app-thumbnail-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    object-fit: cover;
+}
+
+.wii-app-stripe-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/background_texture_transparent.png");
+    background-repeat: repeat;
+    background-size: 1%;
+    opacity: 0.2;
+    user-select: none;
+    z-index: 5;
 }
