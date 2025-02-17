@@ -1,0 +1,61 @@
+/**********************/
+/*** ROOT VARIABLES ***/
+/**********************/
+
+:root {
+    --wii-bg-white: rgb(238,238,238);
+    --wii-outline-blue: rgb(70, 188, 225);
+    --wii-outline-grey: rgb(182, 182, 182);
+    --wii-grey-strong: rgb(184, 184, 184);
+    --wii-grey-weak: rgb(218, 218, 218);
+}
+
+/*********************/
+/*** GENERIC STUFF ***/
+/*********************/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: blanchedalmond;
+}
+
+/************************/
+/*** SITE'S SPECIFICS ***/
+/************************/
+
+
+#main-wii-ui {
+    aspect-ratio: 4/3;
+    padding: 1rem;
+    background-color: var(--wii-bg-white);
+    background-image: url("./background_texture_white.png");
+    background-repeat: repeat;
+}
+
+.wii-app-thumbnail {
+    margin: 10px;    
+    width: 255px;
+    height: 128px;
+    background-color: var(--wii-grey-weak);
+    border-radius: 1.5rem;
+    outline: 3px solid var(--wii-outline-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./background_texture_transparent.png");
+    background-repeat: repeat;
+    background-size: 10%;
+    background-position: 100%;
+}
+
+.wii-app-thumbnail:hover {
+    outline: 4px solid var(--wii-outline-blue);
+}
+
+.wii-app-thumbnail-wiiText {
+    font-size: 5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(0, 0, 0, 0.063);
+    user-select: none;
+}
